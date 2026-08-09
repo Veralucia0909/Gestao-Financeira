@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investe Plus - Carteira</title>
+    <link rel="stylesheet" href="carteira.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="marca">
+        <h1>💰 Investe Plus</h1>
+        <p id="slogan">Saúde financeira e investimentos</p>
+      </div>
+    </header>
+    <nav>
+      <a href="inicio.html" target="_self">Inicio</a>
+      <a href="#" target="_self">Carteira</a>
+      <a href="sobre.html" target="_self">Dicas de Investimento</a>
+      <a href="sobre.html" target="_self">Sobre Nós</a>
+    </nav>
+
+    <main>
+      <!-- sessao de carterira -->
+
+<!-- cadastro de movimentação -->
+      <section id="carteira">
+        <div id="cadastroMovimentacao">
+          <h3>Cadastro de Movimentação</h3>
+
+          <label for="dataMov">Data:</label>
+          <input type="date" id="dataMov" />
+
+          <label>Tipo:</label>
+          <input type="radio" name="entrada-saida" id="entrada">
+          <label for="entrada">Entrada</label>
+          <input type="radio" name="entrada-saida" id="saida">
+          <label for="saida">Saída</label>
+
+          <select class="selects" id="selectEntradas">
+            <option value="" selected disabled hidden>Tipos Entradas</option>
+            <option value="salario">Salário</option>
+            <option value="freelance">Free lance</option>
+            <option value="investimentos">Investimentos</option>
+            <option value="outros">Outros</option>
+          </select>
+
+          <select class="selects" id="selectSaidas">
+            <option value="" selected disabled hidden>Tipos Saídas</option>
+            <option value="contasDeCasa">Contas de Casa</option>
+            <option value="alimentacao">Alimentação</option>
+            <option value="locomocao">Locomoção</option>
+            <option value="celular">Celular</option>
+            <option value="passeios">Passeios</option>
+            <option value="outros">Outros</option>
+           </select>
+
+          <label for="descricaoMov">Descrição:</label>
+          <input type="text" name="descricaoMov" id="descricaoMov" maxlength="50">
+
+          <label for="valorMov">Valor:</label>
+          <input type="number" id="valorMov" placeholder="Ex.: 100" required />
+
+          <button id="btnCadastrar">Salvar</button>
+          <!-- <button id="btnCadastrar">Adicionar</button> -->
+        </div>
+      <!-- Graficos -->
+
+        <div id="chart">
+          <canvas id="graficoPizza"></canvas>
+          <canvas id="graficoLinha"></canvas>
+        </div>
+
+      <!-- tabela historico de movimentações -->
+      
+        <div class="card">
+          <h4>Histórico de Movimentações</h4>
+          <table border="1" id="tabela">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Tipo</th>
+                <th>Categoria</th>
+                <th>Valor</th>
+                <th>🗑️</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaMov"></tbody>
+          </table>
+          <p id="botaoRemover"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © Investe Plus — Projetado para ajudar você a crescer financeiramente.
+      </p>
+    </footer>
+
+    <script  type="module" src="carteira.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>

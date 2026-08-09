@@ -1,0 +1,234 @@
+
+    /* 1. ESTILO GERAL E RESET */
+* {
+    margin: 0; /* Remove margem padrão de todos os elementos */
+    padding: 0; /* Remove padding padrão */
+    box-sizing: border-box; /* Faz o padding e borda não aumentarem o tamanho total */
+    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Define fonte padrão */
+}
+
+body {
+    background-color: #003566; /* Cor de fundo da página */
+    color: black; /* Cor padrão do texto */
+}
+
+
+ /* 2. CABEÇALHO */
+header {
+    background: linear-gradient(0deg, #003566 0%, black 75%); /* Gradiente de azul para preto */
+    display: flex; /* Layout flexível */
+    flex-direction: row; /* Elementos lado a lado */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: space-between; /* Espaça elementos nas extremidades */
+    padding: 10px 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra inferior do header */
+}
+
+/* Marca (logo) */
+#marca {
+    background: none; /* Remove qualquer fundo */
+}
+
+#marca h1 {
+    background: none; /* Sem fundo */
+    color: #ffc300; /* Cor do título */
+    font-size: 28px; /* Tamanho da fonte */
+    margin: auto; /* Centraliza */
+}
+
+#marca p {
+    background: none; /* Sem fundo */
+    font-size: x-small; /* Texto pequeno */
+    color: bisque; /* Cor clara */
+    margin-left: 2px; /* Pequeno espaçamento à esquerda */
+}
+
+/* Área de autenticação */
+#auth {
+    background: none; /* Sem fundo */
+}
+
+#auth button {
+    border: none; /* Remove bordas */
+    padding: 8px 15px; /* Espaçamento interno */
+    background: #ffc300; /* Cor amarela */
+    border-radius: 20px; /* Botão arredondado */
+    cursor: pointer; /* Cursor de clique */
+    font-weight: bold; /* Texto em negrito */
+    transition: 0.3s; /* Animação suave */
+}
+
+#auth button:hover {
+    background-color: #ffda44; /* Amarelo mais claro no hover */
+    transform: scale(1.05); /* Aumenta 5% no hover */
+}
+
+
+  /* 3. NAVEGAÇÃO */
+nav {
+    background-color: #003566; /* Fundo azul */
+    display: flex; /* Layout flexível */
+    justify-content: center; /* Centraliza botões */
+    padding: 10px 0; /* Espaço vertical */
+}
+
+nav button {
+    margin: 0px 15px; /* Espaço entre botões */
+    padding: 10px 20px; /* Tamanho interno */
+    border-radius: 30px; /* Botão estilo cápsula */
+    color: #ffc300; /* Cor do texto */
+    border: 1px solid rgba(255, 251, 221, 0.129); /* Borda leve */
+    font-size: large; /* Texto grande */
+    background: none; /* Sem fundo */
+    cursor: pointer; /* Cursor de clique */
+    transition: all 0.3s ease; /* Animação suave */
+}
+
+nav button:hover {
+    color: #003566; /* Texto azul ao passar o mouse */
+    background-color: #ffc300; /* Fundo amarelo */
+    box-shadow: 0 0 10px rgba(255, 195, 0, 0.6); /* Efeito neon */
+}
+
+
+   /*4. CONTEÚDO PRINCIPAL */
+main {
+    display: flex; /* Organiza cards lado a lado */
+    flex-wrap: wrap; /* Quebra linha quando necessário */
+    justify-content: space-around; /* Espaça os cards */
+    margin-top: 40px; /* Distância do topo */
+    padding-bottom: 60px; /* Evita que encoste no footer */
+}
+
+#card {
+    background: #001d3d; /* Fundo azul escuro */
+    border-radius: 15px; /* Arredondamento */
+    padding: 20px; /* Espaçamento interno */
+    margin: 10px; /* Espaço externo */
+    color: white; /* Texto branco */
+    width: 300px; /* Largura do card */
+    text-align: center; /* Alinha conteúdo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Sombra */
+    transition: transform 0.3s; /* Efeito suave */
+}
+
+#card:hover {
+    transform: translateY(-5px); /* Card sobe ao passar o mouse */
+}
+
+
+   /* 5. RODAPÉ*/
+footer {
+    background: linear-gradient(180deg, #003566 0%, black 75%); /* Gradiente invertido */
+    display: flex; /* Layout flex */
+    justify-content: center; /* Centraliza conteúdo */
+    align-items: center; /* Alinha verticalmente */
+    width: 100%; /* Ocupa toda a largura */
+    height: 3rem; /* Altura fixa */
+    position: fixed; /* Fixa no rodapé */
+    bottom: 0; /* Na parte inferior */
+    z-index: 100; /* Fica sobreposto */
+}
+
+footer p {
+    background: none; /* Sem fundo */
+    color: #ffc300; /* Cor do texto */
+    font-size: 13px; /* Texto pequeno */
+}
+
+
+   /*6. FORMULÁRIOS LOGIN / CADASTRO  */
+.login-cadastro {
+    position: fixed; /* Fica sobreposto ao centro da tela */
+    top: 50%; /* Centro vertical */
+    left: 50%; /* Centro horizontal */
+    transform: translate(-50%, -50%); /* Ajusta alinhamento */
+
+    display: flex; /* Torna elementos flexíveis */
+    flex-direction: column; /* Empilha verticalmente */
+    align-items: center; /* Centraliza conteúdos */
+
+    background-color: #001d3d; /* Fundo azul escuro */
+    color: white; /* Cor do texto */
+
+    border-radius: 20px; /* Bordas arredondadas */
+    width: 320px; /* Largura do formulário */
+    padding: 35px 25px; /* Espaço interno */
+
+    box-shadow: 0 0 20px rgba(255, 195, 0, 0.25); /* Brilho */
+    border: 1px solid rgba(255, 195, 0, 0.3); /* Borda leve */
+    z-index: 1000; /* Fica por cima de tudo */
+}
+
+/* Campos de entrada (Inputs) */
+.login-cadastro input {
+    display: block; /* Ocupa 100% da linha */
+    width: 100%; /* Largura total */
+    margin: 12px 0; /* Margem entre os inputs */
+    padding: 12px 20px; /* Espaço interno */
+
+    border-radius: 30px; /* Input arredondado */
+    border: 2px solid transparent; /* Sem borda visível */
+    outline: none; /* Remove contorno padrão */
+
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+    color: white; /* Texto branco */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: 0.3s ease; /* Animação suave */
+}
+
+/* Efeito ao clicar no campo (Foco) */
+.login-cadastro input:focus {
+    border-color: #ffc300; /* Borda amarela */
+    background-color: rgba(0, 29, 61, 1); /* Azul escuro sólido */
+    box-shadow: 0 0 8px rgba(255, 195, 0, 0.5); /* Brilho */
+}
+
+.login-cadastro input::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder claro */
+    font-style: italic; /* Estilo itálico */
+}
+
+/* Botão de Enviar */
+.login-cadastro button {
+    width: 100%; /* Ocupa largura total */
+    background: #ffc300; /* Fundo amarelo */
+    color: #003566; /* Texto azul */
+    border: none; /* Sem borda */
+    padding: 12px; /* Tamanho do botão */
+
+    border-radius: 30px; /* Formato de cápsula */
+
+    cursor: pointer; /* Cursor de clique */
+    margin-top: 15px; /* Espaço acima */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 16px; /* Tamanho da fonte */
+    text-transform: uppercase; /* Texto em MAIÚSCULAS */
+    transition: all 0.3s ease; /* Animação suave */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2); /* Sombra */
+}
+
+/* Efeito "Vivo" no botão (Hover) */
+.login-cadastro button:hover {
+    background: #ffda44; /* Amarelo mais claro */
+    transform: translateY(-3px); /* Move para cima */
+    box-shadow: 0 6px 15px rgba(255, 195, 0, 0.4); /* Sombra forte */
+}
+
+.login-cadastro button:active {
+    transform: translateY(1px); /* Efeito de clique */
+}
+
+/* Mensagens de link */
+.mensagem {
+    font-size: 12px; /* Texto pequeno */
+    color: #ffc300; /* Texto amarelo */
+    margin-top: 15px; /* Espaço acima */
+    cursor: pointer; /* Ponteiro de clique */
+    transition: 0.2s; /* Animação */
+}
+
+.mensagem:hover {
+    text-decoration: underline; /* Sublinhado */
+    color: #fff; /* Fica branco */
+}

@@ -1,0 +1,281 @@
+/* =========================
+   RESET GERAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  background-color: #003566;
+  color: bisque;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+  background: linear-gradient(0deg, #003566 0%, black 75%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+#marca h1 {
+  color: #ffc300;
+  font-size: 28px;
+}
+
+#marca p {
+      background: none;
+      font-size: x-small;
+      color: bisque;
+      display: flex;
+      margin: 0px 49px 5px;
+}
+
+#auth button {
+  border: none;
+  padding: 5px 10px;
+  background: #ffc300;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#auth button:hover {
+  background: bisque;
+}
+
+
+
+/* =========================
+   NAV
+========================= */
+nav {
+  background-color: #003566;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+nav button {
+  margin: 0px 20px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #ffc300;
+  border: 1px solid rgba(255, 251, 221, 0.129);
+  background: none;
+  font-size: large;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+nav button:hover,
+nav button.ativo {
+  color: #003566;
+  background-color: #ffc300;
+}
+
+a{
+  text-decoration: none;
+  margin: 0px 20px;
+  padding: 10px;
+  background-color: #003566;
+
+  border-radius: 5px;
+  color: #ffc300;
+  border: 1px solid rgba(255, 251, 221, 0.129);
+  font-size: large;
+
+  &:hover {
+    color: #003566;
+    background-color: #ffc300;
+  }
+}
+/* =========================
+   MAIN
+========================= */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+/* =========================
+   SEÇÃO SOBRE NÓS
+========================= */
+#sobre-nos {
+  text-align: center;
+  color: #ffc300;
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  display: none;
+}
+
+#descricao-site {
+  margin: 10px auto 20px;
+  max-width: 600px;
+}
+
+/* =========================
+   MEMBROS
+========================= */
+#membros-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  width: 90%;
+}
+
+.membro {
+  background: #001d3d;
+  color: #ffc300;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(255, 195, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.membro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(255, 195, 0, 0.4);
+}
+
+.membro img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #ffc300;
+}
+
+.membro h3 {
+  color: #ffc300;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.membro p {
+  color: #ffc300;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* =========================
+   DICAS DE INVESTIMENTO (QUADRADOS)
+========================= */
+.dicas-investimento {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.dica {
+  background-color: #001d3d;
+  border: 2px solid #ffc300;
+  border-radius: 10px;
+  padding: 15px 20px;
+  color: #ffc300;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dica:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 195, 0, 0.3);
+}
+
+/* =========================
+   FORMULÁRIOS LOGIN / CADASTRO
+========================= */
+.login-cadastro {
+  display: none;
+  background-color: #001d3d;
+  color: #ffc300;
+  border-radius: 10px;
+  width: 280px;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 0 0 10px #ffc300;
+  text-align: center;
+}
+
+.login-cadastro input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #ffc300;
+  background-color: #002a5c;
+}
+
+.login-cadastro input::placeholder {
+  color: #ffc300;
+}
+
+.login-cadastro button {
+  background: #ffc300;
+  color: #003566;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.login-cadastro button:hover {
+  background: #ffda44;
+}
+
+.mensagem {
+  font-size: 13px;
+  color: #ffc300;
+  margin-top: 8px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: linear-gradient(180deg, #003566 0%, black 75%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+footer p {
+  color: #ffc300;
+  font-size: 13px;
+}

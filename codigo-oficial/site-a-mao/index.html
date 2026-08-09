@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investe Mais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="marca">
+            <h1>💰 Investe Mais</h1>
+            <p id="slogan">Saúde financeira e investimentos</p>
+        </div>
+
+        <div id="auth">
+            <button onclick="autenticar()">Entrar</button>
+            <button onclick="formCadastro()">Cadastrar</button>
+        </div>
+    </header>
+    <nav>
+        <button type="button" onclick="navegacao()">Início</button>
+        <button type="button" onclick="navegacao()">Carteira</button>
+        <button type="button" onclick="navegacao()">Dicas de Investimento</button>
+        <button type="button" onclick="navegacao()">Sobre Nós</button>
+    </nav>
+
+    <main>
+        <div id="card">
+            <h2>Grafico Pizza</h2>
+            <canvas id="graficoPizza"></canvas>
+        </div>
+        <div id="card">
+            <h2>Grafico Linha</h2>
+             <canvas id="graficoLinha"></canvas>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Investe Mais — Projetado para ajudar você a crescer financeiramente.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

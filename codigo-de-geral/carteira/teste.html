@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investe Plus</title>
+  <link rel="stylesheet" href="carteira.css" />
+</head>
+
+<body>
+  <header>
+    <div id="marca">
+      <h1>💰 Investe Plus</h1>
+      <p id="slogan">Saúde financeira e investimentos</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="../inicio/index.html">Inicio</a>
+    <a href="#" target="_self">Carteira</a>
+    <a href="../sobre/index.html">Dicas de Investimento</a>
+    <a href="../sobre/index.html">Sobre Nós</a>
+  </nav>
+
+  <main>
+    <section id="carteira">
+      <div id="cadastroMovimentacao">
+        <h3>Cadastro de Movimentação</h3>
+
+        <label>Data:</label>
+        <input type="date" id="dataMov">
+
+        <label>Descrição:</label>
+        <input type="text" id="descricaoMov" maxlength="50">
+
+        <label>Tipo:</label>
+        <select id="tipoMov">
+          <option value="" disabled selected>Selecione</option>
+          <option value="entrada">Entrada</option>
+          <option value="saida">Saída</option>
+        </select>
+
+        <label>Valor:</label>
+        <input type="number" id="valorMov">
+
+        <button onclick="cadastrarMov()">Salvar</button>
+      </div>
+
+      <div id="chart">
+        <canvas id="graficoPizza"></canvas>
+        <canvas id="graficoLinha"></canvas>
+      </div>
+
+      <div class="card">
+        <h4>Histórico de Movimentações</h4>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Descrição</th>
+              <th>Tipo</th>
+              <th>Valor</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaMov"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© Investe Mais — Projetado para ajudar você a crescer financeiramente.</p>
+  </footer>
+
+  <!-- Firebase (APENAS COMPAT) — Ordem correta -->
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-firestore-compat.js"></script>
+
+  <!-- Configuração Firebase -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDf64lwwvlUlI2RUzQxhsIfDODFwois8WI",
+      authDomain: "investe-mais-b91d9.firebaseapp.com",
+      projectId: "investe-mais-b91d9",
+      storageBucket: "investe-mais-b91d9.appspot.com",
+      messagingSenderId: "119534705329",
+      appId: "1:119534705329:web:0b82573da1f92614a5e090"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Seu script -->
+  <script src="teste.js"></script>
+</body>
+</html>

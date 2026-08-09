@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investe Plus</title>
+  <link rel="stylesheet" href="style copy.css">
+</head>
+<body>
+  <header>
+    <div id="marca">
+      <h1>💰 Investe Plus</h1>
+      <p id="slogan">Saúde financeira e investimentos</p>
+    </div>
+
+    <div id="auth">
+      <button onclick="autenticar()">Entrar</button>
+      <button onclick="formCadastro()">Cadastrar</button>
+    </div>
+  </header>
+
+  <nav>
+    <button type="button" onclick="navegacao('inicio')">Início</button>
+    <button type="button" onclick="navegacao()">Carteira</button>
+    <button type="button" onclick="navegacao()">Dicas de Investimento</button>
+    <button type="button" onclick="navegacao()">Sobre Nós</button>
+  </nav>
+
+  <main>
+    <!-- <div id="card">
+      <h2>Grafico Pizza</h2>
+      <canvas id="graficoPizza"></canvas>
+    </div>
+    <div id="card">
+      <h2>Grafico Linha</h2>
+      <canvas id="graficoLinha"></canvas>
+    </div> -->
+  </main>
+
+  <footer>
+    <p>© Investe Plus — Projetado para ajudar você a crescer financeiramente.</p>
+  </footer>
+
+    <!-- Formulário de Login -->
+    <div id="login" class="login-cadastro">
+      <h2>Login</h2>
+
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginSenha" placeholder="Senha">
+      <button onclick="login()">Entrar</button>
+      <p>Não tem conta? 
+        <a href="#" onclick="mostrarSecao('cadastro'); return false;">Cadastre-se</a>
+      </p>
+      <p id="msgLogin" class="mensagem"></p>
+      <!-- Link de esqueci a senha dentro do formulário -->
+      <p style="margin-top: 5px;">
+      <a href="#" onclick="mostrarSecao('recuperacao'); return false;">Esqueceu sua senha?</a>
+      </p>
+    </div>
+
+  <!-- Formulário de Cadastro -->
+  <div id="cadastro" class="login-cadastro">
+    <h2>Cadastro</h2>
+    <input type="text" id="cadastroNome" placeholder="Nome" />
+    <input type="email" id="cadastroEmail" placeholder="Email" />
+    <input type="password" id="cadastroSenha" placeholder="Senha" />
+    <button onclick="cadastrar()">Cadastrar</button>
+    <p>Já tem conta? <a href="#" onclick="mostrarSecao('login'); return false;">Login</a></p>
+    <p id="msgCadastro" class="mensagem"></p>
+  </div>
+ <!-- Recuperação de Senha -->
+  <div id="recuperacao" class="login-cadastro">
+    <h2>Recuperar Senha</h2>
+    <p>Informe o email da sua conta para enviarmos o link de recuperação.</p>
+    <input type="email" id="recuperacaoEmail" placeholder="Email">
+    <button onclick="recuperarSenha()">Enviar</button>
+    <p><a href="#" onclick="mostrarSecao('login'); return false;">Voltar para o Login</a></p>
+    <p id="msgRecuperacao" class="mensagem"></p>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.5.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDf64lwwvlUlI2RUzQxhsIfDODFwois8WI",
+      authDomain: "investe-mais-b91d9.firebaseapp.com",
+      projectId: "investe-mais-b91d9",
+      storageBucket: "investe-mais-b91d9.firebasestorage.app",
+      messagingSenderId: "119534705329",
+      appId: "1:119534705329:web:0b82573da1f92614a5e090"
+    };
+
+    if (!firebase.apps.length) { firebase.initializeApp(firebaseConfig); }
+
+
+    // Oculta formulários no início
+    window.onload = function() {
+    document.querySelectorAll('.login-cadastro').forEach(div => div.style.display = 'none');
+    };
+    
+    // Função para mostrar o login/cadastro
+    function mostrarSecao(secao) {
+      document.querySelectorAll('.login-cadastro').forEach(div => div.style.display = 'none');
+      document.getElementById(secao).style.display = 'block';
+    }
+
+    function autenticar() {
+      mostrarSecao('login');
+    }
+
+    function formCadastro() {
+      mostrarSecao('cadastro');
+    }
+
+    
+    </script>
+    <script src="script.js"></script> 
+</body>
+</html>
+
+

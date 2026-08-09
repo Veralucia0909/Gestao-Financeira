@@ -1,0 +1,168 @@
+/* ------------------ RESET GERAL ------------------ */
+* {
+    background-color: #003566;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ------------------ CABEÇALHO ------------------ */
+header {
+    background: linear-gradient(0deg, #003566 0%, black 75%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+#marca {
+    background: none;
+}
+
+#marca h1 {
+    background: none;
+    color: #ffc300;
+    font-size: 28px;
+    margin: auto;
+}
+
+#marca p {
+    background: none;
+    font-size: x-small;
+    color: bisque;
+    display: flex;
+    margin: 0px 49px 5px;
+}
+
+#auth {
+    background: none;
+}
+
+#auth button {
+    border: none;
+    padding: 5px 10px;
+    background: #ffc300;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#auth button:hover {
+    background: #ffd60a;
+}
+
+/* ------------------ NAVEGAÇÃO ------------------ */
+nav {
+  background-color: #003566;
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    margin: 0px 20px;
+    padding: 10px;
+    background-color: #003566;
+
+    border-radius: 5px;
+    color: #ffc300;
+    border: 1px solid rgba(255, 251, 221, 0.129);
+    font-size: large;
+
+    &:hover {
+      color: #003566;
+      background-color: #ffc300;
+    }
+  }
+}
+/* ------------------ SEÇÃO ECONOMIA ------------------ */
+#economia {
+    background-color: #001d3d;
+    text-align: center;
+    color: #ffc300;
+}
+
+#economia h2.section-title {
+    margin: 20px;
+    color: #ffc300;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#economia h2 {
+    color: bisque;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.economia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+    gap: 20px;
+    padding: 0 20px;
+    justify-items: center;
+}
+
+.economia-card {
+    background-color: #002855;
+    border: 1px solid #ffc300;
+    border-radius: 8px;
+    padding: 20px;
+    color: bisque;
+    text-align: left;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 300px; /* limita o tamanho dos cards */
+}
+
+.economia-card h3 {
+    color: #ffc300;
+    margin-bottom: 10px;
+    background: none;
+}
+
+.economia-card p {
+    color: #ffffff;
+    background: none;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.economia-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px #ffc300;
+}
+
+/* Responsividade: ajusta a quantidade de colunas */
+@media (max-width: 900px) {
+    .economia-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .economia-grid {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+}
+
+/* ------------------ RODAPÉ ------------------ */
+footer {
+    background: linear-gradient(180deg, #003566 0%, black 75%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer p {
+    background: none;
+    color: #ffc300;
+    font-size: 13px;
+}

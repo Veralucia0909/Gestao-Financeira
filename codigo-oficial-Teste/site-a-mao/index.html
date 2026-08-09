@@ -1,0 +1,103 @@
+<!-- ATENÇÃO ATENÇÃO ATENÇÃO -->
+<!-- SINCRONIZAÇÃO FEITA COM CHAT GPT, APENAS UM TESTE -->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investe Mais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div id="marca">
+      <h1>💰 Investe Mais</h1>
+      <p id="slogan">Saúde financeira e investimentos</p>
+    </div>
+
+    <div id="auth">
+      <button id="btnLogin">Entrar</button>
+      <button id="btnCadastro">Cadastrar</button>
+    </div>
+  </header>
+
+  <nav>
+    <button onclick="mostrarPagina('inicio')">Início</button>
+    <button onclick="mostrarPagina('economia')">Minhas Economias</button>
+    <button onclick="mostrarPagina('carteira')">Carteira</button>
+  </nav>
+
+  <main>
+    <!-- PÁGINA INICIAL -->
+    <section id="inicio" class="active">
+      <div class="card">
+        <h2>Bem-vindo ao Investe Mais</h2>
+        <p>Gerencie suas finanças de forma inteligente e segura.</p>
+      </div>
+
+      <div id="loginSection" style="display:none;">
+        <h3>Entrar</h3>
+        <input type="email" id="loginEmail" placeholder="E-mail"><br>
+        <input type="password" id="loginSenha" placeholder="Senha"><br>
+        <button id="entrar">Entrar</button>
+        <p id="msgLogin"></p>
+      </div>
+
+      <div id="cadastroSection" style="display:none;">
+        <h3>Cadastrar</h3>
+        <input type="text" id="cadastroNome" placeholder="Nome completo"><br>
+        <input type="email" id="cadastroEmail" placeholder="E-mail"><br>
+        <input type="password" id="cadastroSenha" placeholder="Senha"><br>
+        <button id="cadastrar">Cadastrar</button>
+        <p id="msgCadastro"></p>
+      </div>
+    </section>
+
+    <!-- PÁGINA ECONOMIA -->
+    <section id="economia">
+      <div class="card">
+        <h2>Minhas Economias</h2>
+        <p>Acompanhe o crescimento dos seus investimentos e metas.</p>
+      </div>
+    </section>
+
+    <!-- PÁGINA CARTEIRA -->
+    <section id="carteira">
+      <div class="card">
+        <h2>Controle Financeiro</h2>
+
+        <input type="date" id="dataMov">
+        <input type="text" id="descricaoMov" placeholder="Descrição">
+        <input type="number" id="valorMov" placeholder="Valor (R$)">
+        <select id="tipoMov">
+          <option value="">Tipo</option>
+          <option value="entrada">Entrada</option>
+          <option value="saida">Saída</option>
+        </select>
+        <button onclick="cadastrarMov()">Cadastrar</button>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Descrição</th>
+              <th>Valor</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaMov"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Investe Mais © 2025 - Todos os direitos reservados</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

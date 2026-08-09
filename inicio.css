@@ -1,0 +1,321 @@
+/* ------------------ RESET ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: #001d3d;
+    color: #fff;
+}
+
+/* ------------------ CABEÇALHO ------------------ */
+header {
+  background: linear-gradient(0deg, #003566 0%, black 75%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+
+  #marca {
+    background: none;
+
+    h1 {
+      background: none;
+      color: #ffc300;
+      font-size: 28px;
+      margin: auto;
+    }
+
+    p {
+      background: none;
+      font-size: x-small;
+      color: bisque;
+      display: flex;
+      margin: 0px 49px 5px;
+    }
+  }
+  
+}
+/* ------------------ NAV ------------------ */
+nav {
+  background-color: #003566;
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-decoration: none;
+    margin: 0px 20px;
+    padding: 10px;
+    background-color: #003566;
+
+    border-radius: 5px;
+    color: #ffc300;
+    border: 1px solid rgba(255, 251, 221, 0.129);
+    font-size: large;
+
+    &:hover {
+      color: #003566;
+      background-color: #ffc300;
+    }
+  }
+}
+
+/* ------------------ ECONOMIA ------------------ */
+#economia {
+    padding: 40px 20px;
+    text-align: center;
+    background: #001d3d;
+}
+
+#economia h2.section-title {
+    color: #ffc300;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#economia h2 {
+    color: bisque;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* GRID MODERNO */
+.economia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+/* Cards com estilo diferente */
+.economia-card {
+    background: #002855;
+    border: 1px solid #ffc300;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.economia-card h3 {
+    color: #ffd60a;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+.economia-card p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+    background: linear-gradient(to top, black, #003566);
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffc300;
+    font-size: 13px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background: #001d3d;
+    color: white;
+}
+
+/* ================= CABEÇALHO ================= */
+header {
+    background: linear-gradient(to bottom, black, #003566);
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#marca h1 {
+    color: #ffc300;
+    font-size: 30px;
+}
+
+#marca p {
+    color: bisque;
+    font-size: 12px;
+}
+
+#auth button {
+    background: #ffc300;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#auth button:hover {
+    background: #ffd60a;
+}
+
+/* ================= NAVEGAÇÃO ================= */
+nav {
+    background: #003566;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav button {
+    margin: 8px 16px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid rgba(255, 195, 0, 0.4);
+    border-radius: 6px;
+    color: #ffc300;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: #ffc300;
+    color: #003566;
+}
+
+/* ------------------ WIDGET DE MOEDAS (IFRAME) ------------------ */
+.widget-moedas {
+    background-color: #001d3d;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.widget-moedas iframe {
+    width: 100%;
+    height: 480px;
+    border: 2px solid #ffc300;
+    border-radius: 8px;
+    background: none;
+}
+
+/* Texto "Desenvolvido por" */
+
+.widget-moedas .poweredBy {
+    margin-top: 10px;
+    font-size: 12px;
+    background: none;
+    color: bisque;
+}
+
+.widget-moedas .poweredBy a {
+    color: #ffc300;
+    text-decoration: none;
+}
+
+.widget-moedas .poweredBy a:hover {
+    text-decoration: underline;
+}
+✅ Exemplo de com
+
+/* ================= SEÇÃO ECONOMIA (existente) ================= */
+#economia {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#economia .section-title {
+    font-size: 28px;
+    color: #ffc300;
+    margin-bottom: 12px;
+}
+
+.economia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.economia-card {
+    background: #002855;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ffc300;
+    transition: 0.3s;
+}
+
+
+.economia-card h3 {
+    color: #ffd60a;
+    margin-bottom: 10px;
+}
+
+/* ================= NOVA SEÇÃO: INADIMPLÊNCIA ================= */
+#inadimplencia {
+    padding: 60px 20px;
+    background: #001529;
+}
+
+#inadimplencia h2.section-title {
+    text-align: center;
+    font-size: 26px;
+    color: #ffc300;
+    margin-bottom: 40px;
+}
+
+/* Grade responsiva */
+.inadimplencia-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+}
+
+.inad-card {
+    background: #002855;
+    border-left: 5px solid #ffc300;
+    padding: 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.inad-card h3 {
+    color: #ffd60a;
+    margin-bottom: 15px;
+}
+
+.inad-card p,
+.inad-card ul li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #f2f2f2;
+}
+
+/* ================= RODAPÉ ================= */
+footer {
+    background: linear-gradient(to top, black, #003566);
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffc300;
+    font-size: 13px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

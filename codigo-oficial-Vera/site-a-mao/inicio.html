@@ -1,0 +1,109 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1>inicio</h1>
+
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investe Plus</title>
+    <link rel="stylesheet" href="carteira.css" />
+  </head>
+
+  <body>
+    <header>
+      <div id="marca">
+        <h1>💰 Investe Plus</h1>
+        <p id="slogan">Saúde financeira e investimentos</p>
+      </div>
+      <!-- 
+      <div id="auth">
+        <button onclick="autenticar()">Entrar</button>
+        <button onclick="formCadastro()">Cadastrar</button>
+      </div> -->
+    </header>
+    <nav>
+      <a href="../inicio/index.html">Inicio</a>
+      <a href="#" target="_self">Carteira</a>
+      <a href="../sobre/index.html">Dicas de Investimento</a>
+      <a href="../sobre/index.html">Sobre Nós</a>
+    </nav>
+
+    <main>
+      <!-- sessao de carterira -->
+
+      <!-- cadastro de movimentação -->
+      <section id="carteira">
+        <div id="cadastroMovimentacao">
+          <h3>Cadastro de Movimentação</h3>
+
+          <label for="dataMov">Data:</label>
+          <input type="date" id="dataMov" />
+
+          <label for="descricaoMov">Descrição:</label>
+          <input type="text" id="descricaoMov" maxlength="50" placeholder="Ex.: Conta de luz" required/>
+
+          <label for="tipoMov">Tipo:</label>
+          <select id="tipoMov">
+            <option value="" selected disabled hidden>Selecione o tipo</option>
+            <option value="entrada">Entrada</option>
+            <option value="saida">Saida</option>
+          </select>
+
+          <label for="valorMov">Valor:</label>
+          <input type="number" id="valorMov" placeholder="Ex.: 100" required />
+
+          <button onclick="cadastrarMov()">Salvar</button>
+        </div>
+      <!-- Graficos -->
+
+        <div id="chart">
+          <canvas id="graficoPizza"></canvas>
+          <canvas id="graficoLinha"></canvas>
+        </div>
+
+      <!-- tabela historico de movimentações -->
+      
+        <div class="card">
+          <h4>Histórico de Movimentações</h4>
+          <table border="1" id="tabela">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Tipo</th>
+                <th>Valor</th>
+                <th>🗑️</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaMov"></tbody>
+          </table>
+          <p id="botaoRemover"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © Investe Mais — Projetado para ajudar você a crescer financeiramente.
+      </p>
+    </footer>
+    
+    <script src="carteira.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
