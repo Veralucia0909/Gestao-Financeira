@@ -19,7 +19,7 @@ Com a plataforma, é possível realizar o cadastro, registrar transações de re
 
 Você pode testar a aplicação em funcionamento através do link de deploy:
 
-🔗 **[projeto-senai-primera-fase.vercel.app](https://projeto-senai-primera-fase.vercel.app/)**
+🔗 **[projeto-senai-primera-fase.vercel.app](https://gestao-financeira-crud.vercel.app/)]**
 
 ---
 
